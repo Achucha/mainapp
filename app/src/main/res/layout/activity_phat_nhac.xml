@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".phatNhac">
+
+    <TextView
+        android:id="@+id/textviewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="ten bai hat"
+        android:textSize="30sp" />
+
+    <ImageButton
+        android:id="@+id/ibPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/ibShuff"
+        android:background="@null"
+        android:src="@drawable/prev"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@+id/ibPre"
+        android:background="@null"
+        android:src="@drawable/play"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <ImageButton
+        android:id="@+id/ibNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="104dp"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:src="@drawable/next"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/ibPlay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/textviewTimeSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="00:00"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textviewTimeTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="00:00"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageViewDVD"
+        android:layout_width="match_parent"
+        android:layout_height="388dp"
+        android:layout_above="@+id/seekBar"
+        android:layout_below="@+id/textviewTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="99dp"
+        app:srcCompat="@drawable/dvd" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onInsSongBaClick"
+        android:layout_alignRight="@id/imageViewDVD"
+        android:layout_alignBottom="@id/imageViewDVD"
+        app:srcCompat="@drawable/love"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibShuff"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/shuffle"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ibLoop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/repeat"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</RelativeLayout>
